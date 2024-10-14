@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Deeplink Converter for iOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>UPI intent  Converter</h1>
+
+    <label for="upiId">Enter UPI ID:</label><br>
+    <input type="text" id="upiId" placeholder="e.g. yourname@bank"><br>
+    
+    <label for="Merchantname">Merchantname:</label><br>
+    <input type="text" id="Merchantname" placeholder="e.g. yourname@bank"><br>
+
+    <label for="mcc">Enter mcc:</label><br>
+    <input type="number" id="mcc" placeholder="e.g. 6211"><br>
+
+    <label for="orderid">Enter orderid:</label><br>
+    <input type="number" id="orderid" placeholder="e.g. 123456789"><br>
+
+    <label for="amount">Enter Amount:</label><br>
+    <input type="number" id="amount" placeholder="e.g. 100.00"><br>
+
+    <label for="app">Choose UPI App:</label><br>
+    <select id="app">
+        <option value="gpay">Google Pay</option>
+        <option value="amazonpay">Amazon Pay</option>
+        <option value="other apps">other apps</option>
+    </select><br>
+
+    <button class="button" onclick="generateLink()">Generate UPI Link</button>
+    
+    <p id="result"></p>
+
+    <h3>QR Code:</h3>
+    <div id="qrcode"></div>
+
+    <!-- External JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
